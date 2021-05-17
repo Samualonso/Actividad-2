@@ -1,5 +1,10 @@
 package cdm1.SamuelAlonso;
 
+/**
+ * Clase para cada jugador de la partida.
+ * @author Samuel
+ *
+ */
 public class Jugador {
 
 	private String jugador;

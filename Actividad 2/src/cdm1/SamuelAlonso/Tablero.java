@@ -1,5 +1,11 @@
 package cdm1.SamuelAlonso;
 
+/**
+ * Esta clase crea el tablero y realiza las operaciones necesarias en él.
+ * 
+ * @author Samuel
+ *
+ */
 public class Tablero {
 
 	String[] tablero;
@@ -7,7 +13,9 @@ public class Tablero {
 	public Tablero() {
 		tablero = new String[] {"_", "_", "_", "_", "_", "_", "_", "_", "_"};		
 	}
-	
+	/**
+	 * Se dibuja el tablero.
+	 */
 	public void dibujarTablero() {
 		System.out.println("\n    1   2   3");
 		System.out.println("A | " + tablero[0] + " | " + tablero[1] + " | " + tablero[2] + " |");
@@ -17,6 +25,10 @@ public class Tablero {
 		System.out.println("C | " + tablero[6] + " | " + tablero[7] + " | " + tablero[8] + " |");
 	}
 	
+	/**
+	 * Se comprueba si hay algún ganador.
+	 * @return 
+	 */
 	public String compruebaGanador() {
 		String ganador = null;
 		for (int a = 0; a < 8; a++) {
@@ -51,13 +63,15 @@ public class Tablero {
 				ganador = "X";
 			} else if (linea.equals("OOO")) {
 				ganador = "O";
-			} else if(completo()) {
-				ganador = "Empate";
 			}
 		}
 		return ganador;
 	}
 	
+	/**
+	 * Comprueba si el tablero está completo.
+	 * @return
+	 */
 	public boolean completo() {
 		boolean estaCompleto = false;
 		if(tablero[0] != "_" && tablero[1] != "_" && tablero[2] != "_" && tablero[3] != "_" && tablero[4] != "_" && tablero[5] != "_" && tablero[6] != "_" && tablero[7] != "_" && tablero[8] != "_") {
@@ -66,6 +80,12 @@ public class Tablero {
 		return estaCompleto;
 	}
 	
+	/**
+	 * Método para cambiar la casilla.
+	 * @param linea
+	 * @param jugador
+	 * @return
+	 */
 	public boolean cambiarCasilla(String linea, Jugador jugador) {
 		boolean cambiado = false;
 		switch(linea) {

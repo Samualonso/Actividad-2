@@ -1,5 +1,10 @@
 package cdm1.SamuelAlonso;
 
+/**
+ * Clase para comprobar que la coordenada se haya introducido correctamente.
+ * @author Samuel
+ *
+ */
 public class ValidarCoordenada {
 	
 	private boolean esBien(String m) {

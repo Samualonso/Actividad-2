@@ -1,5 +1,9 @@
 package cdm1.SamuelAlonso;
-
+/**
+ * Clase para las excepciones de la coordenada.
+ * @author Samuel
+ *
+ */
 public class ExcepcionCoordenada extends Exception{
 	
 	private int malIndicada = 0;
